@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d7da0c2b8eb4365449162b954e2bde37
-timeCreated: 1487634273
+timeCreated: 1487653432
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,7 @@ TextureImporter:
     21300014: Alien16x16_7
     21300016: Alien16x16_8
     21300018: Alien16x16_9
+    21300020: Alien16x16_10
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -37,7 +38,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -50,7 +51,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 18
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -210,10 +211,23 @@ TextureImporter:
         serializedVersion: 2
         x: 36
         y: 16
-        width: 17
-        height: 14
+        width: 8
+        height: 6
       alignment: 7
       pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alien16x16_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 26
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
