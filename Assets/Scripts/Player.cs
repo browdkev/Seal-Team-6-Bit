@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
-{
+{ 
     public float maxSpeed = 5;
     public float speed = 50f;
-    public float jumpPower = 150f;
+    public float jumpPower = 300f;
 
     public bool grounded;
 
@@ -22,7 +21,7 @@ public class Player : MonoBehaviour
 	void Update ()
     {
         anim.SetBool("Grounded", grounded);
-        anim.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
         if (Input.GetAxis("Horizontal") < -0.1f)
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -31,9 +30,22 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
+        if (Input.GetButtonDown("Jump") && grounded)
+        {
+            rb2d.AddForce(Vector2.up * jumpPower);
+        }
     }
     void FixedUpdate()
     {
+        Vector3 easeVelocity = rb2d.velocity;
+        easeVelocity.y = rb2d.velocity.y;
+        easeVelocity.z = 0.0f;
+        easeVelocity.x *= 0.75f;
+
+        if (grounded)
+        {
+            rb2d.velocity = easeVelocity;
+        }
         float h = Input.GetAxis("Horizontal");
 
         rb2d.AddForce((Vector2.right * speed) * h);
