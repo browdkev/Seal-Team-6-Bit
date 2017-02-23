@@ -25,6 +25,8 @@ public class newGame : MonoBehaviour
     }
     public void onClick()
     {
+        //starts new game
         UnityEngine.SceneManagement.SceneManager.LoadScene("sceneMain");
+
     }
 }
