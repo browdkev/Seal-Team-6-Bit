@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
 	void Start ()
     {
+        //gets game objects
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
 
@@ -35,9 +36,12 @@ public class Player : MonoBehaviour
 	
 	void Update ()
     {
+        //controls and manages character movement and health
+
         anim.SetBool("Grounded", grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
 
+        //controls players movement (left and right, jumping)
         if (Input.GetAxis("Horizontal") < -0.1f)
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -50,7 +54,7 @@ public class Player : MonoBehaviour
         {
             rb2d.AddForce(Vector2.up * jumpPower);
         }
-
+        //determines what to do when character is a certain health
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
@@ -62,15 +66,17 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //controls the velocity of the player model
         Vector3 easeVelocity = rb2d.velocity;
         easeVelocity.y = rb2d.velocity.y;
         easeVelocity.z = 0.0f;
         easeVelocity.x *= 0.75f;
-
+        //conditional, determines if the player is standing on the grouond
         if (grounded)
         {
             rb2d.velocity = easeVelocity;
         }
+        //contorls the velocity of the player
         float h = Input.GetAxis("Horizontal");
 
         rb2d.AddForce((Vector2.right * speed) * h);
@@ -86,6 +92,7 @@ public class Player : MonoBehaviour
     }
     void Die()
     {
+        //loads scene after player dies
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
@@ -98,7 +105,7 @@ public class Player : MonoBehaviour
             mail.From = new MailAddress("bitteam6@gmail.com");
             mail.To.Add("bitteam6@gmail.com");
             mail.Subject = "Debug Message";
-            mail.Body = "Game closed successfully. There were no errors. Time: " + System.DateTime.Now;
+            mail.Body = "Game closed successfully. There were no errors. Time: " + System.DateTime.Now + "User: " + System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
             SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
             smtpServer.Port = 587;
@@ -115,7 +122,7 @@ public class Player : MonoBehaviour
 
         }
 
-
+        //application exits after above code has run
         Application.Quit();
     }
 
