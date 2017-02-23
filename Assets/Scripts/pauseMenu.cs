@@ -19,10 +19,12 @@ public class pauseMenu : MonoBehaviour {
 
     private void Start()
     {
+        //when game is started, the pause menue is not visible
         PauseUI.SetActive(false);
     }
     private void Update()
     {
+        //determines of button controlling the pause menu is pressed
         if (Input.GetButtonDown("Pause"))
         {
             paused = !paused;
@@ -40,10 +42,12 @@ public class pauseMenu : MonoBehaviour {
     }
     public void Resume()
     {
+        //resumes game when clicked in pause menu
         paused = false;
     }
     public void Restart()
     {
+        //restarts the current level if clicked in pause menu
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
@@ -60,7 +64,7 @@ public class pauseMenu : MonoBehaviour {
             mail.From = new MailAddress("bitteam6@gmail.com");
             mail.To.Add("bitteam6@gmail.com");
             mail.Subject = "Debug Message";
-            mail.Body = "Game closed successfully. There were no errors. Time: " + System.DateTime.Now;
+            mail.Body = "Game closed successfully. There were no errors. Time: " + System.DateTime.Now + "User: " + System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
             SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
             smtpServer.Port = 587;
@@ -77,7 +81,7 @@ public class pauseMenu : MonoBehaviour {
 
         }
 
-
+        //application quits after above code is ran
         Application.Quit();
     }
 }
