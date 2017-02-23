@@ -13,8 +13,14 @@ public class toCredits : MonoBehaviour {
 	void Update () {
 		
 	}
+<<<<<<< HEAD
     private void OnTriggerEnter2D(Collider2D collision)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("SceneCredits");
+=======
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
+>>>>>>> origin/master
     }
 }
