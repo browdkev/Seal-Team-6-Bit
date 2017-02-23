@@ -18,6 +18,10 @@ public class alienAI : MonoBehaviour
     public Animator anim;
     public Transform shootPointLeft;
 
+    private void Awake()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
     private void Start()
     {
         currentHealth = maxHealth;
@@ -48,9 +52,12 @@ public class alienAI : MonoBehaviour
             Vector2 direction = target.transform.position - transform.position;
             direction.Normalize();
 
-            Object bulletClone;
+            GameObject bulletClone;
 
             bulletClone = Instantiate(bullet, shootPointLeft.transform.position, shootPointLeft.transform.rotation) as GameObject;
+            bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+
+            bulletTimer = 0;
         } 
     }
 }
