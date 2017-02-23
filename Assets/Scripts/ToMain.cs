@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class toCredits : MonoBehaviour {
+public class ToMain : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,8 +13,10 @@ public class toCredits : MonoBehaviour {
 	void Update () {
 		
 	}
-    void OnTriggerEnter(Collider other)
+    public void onClick()
     {
-        Destroy(other.gameObject);
+        //starts new game
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+
     }
 }
