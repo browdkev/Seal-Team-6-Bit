@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d7da0c2b8eb4365449162b954e2bde37
-timeCreated: 1487653432
+timeCreated: 1487822431
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,7 @@ TextureImporter:
     21300016: Alien16x16_8
     21300018: Alien16x16_9
     21300020: Alien16x16_10
+    21300022: Alien16x16_11
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -93,9 +94,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 50
+        y: 48
         width: 11
-        height: 14
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,9 +107,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 49
+        y: 48
         width: 11
-        height: 14
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,9 +133,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 49
+        y: 48
         width: 11
-        height: 14
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,9 +146,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 34
-        width: 11
-        height: 14
+        y: 32
+        width: 10
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,7 +199,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 16
-        width: 27
+        width: 12
         height: 6
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -226,6 +227,19 @@ TextureImporter:
         y: 26
         width: 5
         height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Alien16x16_11
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 16
+        width: 10
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
