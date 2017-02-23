@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class cameraPan : MonoBehaviour {
     public Animation anim;
+    
 
     void Start ()
     {
-        anim.wrapMode = WrapMode.ClampForever;
+        
+        anim.wrapMode = WrapMode.Once;
         anim.Play("cameraPan.anim");
+        anim.Play("buttonCanvasAnim.anim");
 
     }
 
@@ -16,6 +19,10 @@ public class cameraPan : MonoBehaviour {
     void Update ()
     {
 
+       //if (anim.IsPlaying("cameraPan.anim") == false)
+       // {
+
+       // }
 
     }
 }
