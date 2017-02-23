@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Adds force to the bullet from the player
+/// </summary>
 public class addForce : MonoBehaviour {
     public int speed;
     private Rigidbody2D rb2d;

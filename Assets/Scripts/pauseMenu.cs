@@ -53,7 +53,7 @@ public class pauseMenu : MonoBehaviour {
     }
     public void MainMenu()
     {
-        //Application.LoadLevel(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("mainMenu");
     }
     public void Quit()
     {

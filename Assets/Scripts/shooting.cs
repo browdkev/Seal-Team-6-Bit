@@ -9,6 +9,7 @@ public class shooting : MonoBehaviour {
 
     private void Update()
     {
+        //Set position of bullet to player position
         positionRight = new Vector3(transform.position.x - .07f, transform.position.y);
         if (Input.GetMouseButtonDown(0))
         {
@@ -18,6 +19,7 @@ public class shooting : MonoBehaviour {
     }
     void shoot()
     {
+        //Create a clone of the player bullet
         Instantiate(bullet, positionRight, Quaternion.identity);
     }
 }

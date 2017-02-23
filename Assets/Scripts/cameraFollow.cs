@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class cameraFollow : MonoBehaviour {
+    //Initiate variable
     private Vector2 velocity;
     public Vector3 minCameraPos;
     public Vector3 maxCameraPos;
@@ -19,6 +20,7 @@ public class cameraFollow : MonoBehaviour {
 	}
     private void FixedUpdate()
     {
+        //Smooth Camera movements
         float posX = Mathf.SmoothDamp(transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
         float posY = Mathf.SmoothDamp(transform.position.y, player.transform.position.y, ref velocity.y, smoothTimeY);
 

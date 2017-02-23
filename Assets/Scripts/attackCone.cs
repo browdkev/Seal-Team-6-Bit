@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class attackCone : MonoBehaviour {
+    //Checking cone for player
     public alienAI alienAI;
 
     private void Awake()

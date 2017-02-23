@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class alienAI : MonoBehaviour
 {
+    //Initilize variable
     public int currentHealth;
     public int maxHealth;
 
@@ -33,27 +34,23 @@ public class alienAI : MonoBehaviour
     void rangeCheck()
     {
         distance = Vector3.Distance(transform.position, target.transform.position);
-        if(distance <= wakeRange)
-        {
-
-        }
-        if(distance >= wakeRange)
-        {
-
-        }
 
     }
+    /// <summary>
+    /// Method spawns bullets and sends them in the players direction
+    /// </summary>
     public void Attack()
     {
         bulletTimer += Time.deltaTime;
         
         if(bulletTimer >= shootInterval)
         {
+            //Sets direction of bullet
             Vector2 direction = target.transform.position - transform.position;
             direction.Normalize();
 
             GameObject bulletClone;
-
+            //Clones bullets
             bulletClone = Instantiate(bullet, shootPointLeft.transform.position, shootPointLeft.transform.rotation) as GameObject;
             bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
 
