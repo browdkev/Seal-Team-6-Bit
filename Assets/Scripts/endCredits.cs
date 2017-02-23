@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class toCredits : MonoBehaviour {
+public class endCredits : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,8 +13,4 @@ public class toCredits : MonoBehaviour {
 	void Update () {
 		
 	}
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SceneCredits");
-    }
 }

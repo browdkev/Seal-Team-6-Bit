@@ -43,7 +43,7 @@ public class pauseMenu : MonoBehaviour {
     public void Resume()
     {
         //resumes game when clicked in pause menu
-        paused = false;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SceneCredits");
     }
     public void Restart()
     {
