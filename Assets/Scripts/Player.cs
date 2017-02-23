@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public bool grounded;
 
     public int currentHealth;
-    public int maxHealth = 100;
+    public int maxHealth = 5;
 
     private Rigidbody2D rb2d;
     private Animator anim;
